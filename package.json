@@ -1,0 +1,16 @@
+{
+  "name": "your-project",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "npm run start:backend && npm run start:frontend",
+    "start:backend": "cd backend && node index.js",
+    "start:frontend": "cd frontend && npm start",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "cd backend && nodemon index.js",
+    "dev:frontend": "cd frontend && npm start",
+    "build:frontend": "cd frontend && npm run build"
+  },
+  "dependencies": {
+    "concurrently": "^7.0.0"
+  }
+}
